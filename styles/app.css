@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap');
+
+@layer base{}
+
+body {
+  @apply bg-backgraund-main-900;
+}
+h1 {
+  @apply text-5xl font-bold font-serif text-white
+}
+h2 {
+  @apply text-4xl font-normal font-sans text-white text-opacity-75
+}
+.button-solid {
+  @apply rounded-md px-4 py-3 hover:shadow-lg text-lg text-white bg-radical-red-500 hover:bg-radical-red-600
+}
+.button-outline {
+  @apply rounded-md px-4 py-3 hover:shadow-lg text-lg text-radical-red-400 bg-transparent border border-radical-red-400 hover:border-radical-red-500 hover:bg-white hover:bg-opacity-5
+}
