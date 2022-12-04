@@ -47,22 +47,25 @@ export default function Index() {
           />
         </div>
         {/* Illustrated summary of features */}
-        <div id="sumaryFiaturesZone">
+        <div id="sumaryFiaturesZone" className='py-20'>
           <SummaryFeature dataSummaryFeacture={dataSummaryFeacture} />
         </div>
         {/* objectives */}
-        <div>
+        <div id='objectives' className='py-10'>
           <FullScreenObjectiveAndDetailing
             text="Nosso objetivo é entregar o que tem de melhor em Landing Pages profissionais para que você consiga atigir seus resultaodos."
             menssage="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum hendrerit tortor libero, id tincidunt sapien mattis et. Duis nec lectus blandit, posuere felis in, mollis dui. Curabitur egestas urna in elit blandit, id aliquet tellus sollicitudin. Vivamus vitae vehicula elit. Praesent sed dui tortor."
+            orientationReverse={false}
+            image={{ path: 'aaa.png', titleImage: 'imagem de fundo que demostra tecnologia' }}
           />
         </div>
         {/* detailing */}
-        <div>
+        <div id='detailings' className='py-10'>
           <FullScreenObjectiveAndDetailing
             text="Landing Page é uma página que conta com todos os elementos voltados à conversão, do visitante ao Lead ou da oportunidade ao cliente. Também conhecidas como páginas de aterrissagem, páginas de conversão ou de captura, elas são item-chave nas campanhas de Marketing Digital."
             menssage="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum hendrerit tortor libero, id tincidunt sapien mattis et. Duis nec lectus blandit, posuere felis in, mollis dui. Curabitur egestas urna in elit blandit, id aliquet tellus sollicitudin. Vivamus vitae vehicula elit. Praesent sed dui tortor."
-            orientationReverse={false}
+            orientationReverse={true}
+            image={{ path: 'aaa.png', titleImage: 'imagem de fundo que demostra tecnologia' }}
           />
         </div>
         {/* depositions */}

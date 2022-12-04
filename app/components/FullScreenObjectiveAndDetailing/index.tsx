@@ -1,41 +1,49 @@
+
+
 type FullScreenObjectiveAndDetailingProps = {
   text: string
   menssage: string
   orientationReverse?: boolean
+  image: {
+    path: string,
+    titleImage: string
+  }
 }
 
 export const FullScreenObjectiveAndDetailing = ({
   text,
   menssage,
-  orientationReverse = false
+  orientationReverse = false,
+  image
 }: FullScreenObjectiveAndDetailingProps) => {
   return (
-    <section className="w-full md:w-[722px]">
+    <section className="w-full relative">
       <div
         className={
           orientationReverse
-            ? 'flex h-screen w-full items-end justify-center'
-            : 'flex h-screen w-full justify-center'
+            ? 'flex h-screen w-full items-center flex-row-reverse '
+            : 'flex h-screen w-full  items-center'
         }
       >
         <div
-          title="image de uma pessoa utilizando a plataforma da holder+"
-          className=" h-[229px] w-[356px] sm:h-[328px] sm:w-[480px] md:h-[360px] md:w-[550px] lg:h-[578px] lg:w-[730px] "
+          title={image.titleImage}
+          className={orientationReverse ? 'relative w-[35vw] right-20  h-full' : 'relative w-[35vw] left-20  h-full'}
           style={{
-            backgroundImage: "url('/images/cadastro/telas.png')",
+            backgroundImage: `url(${image.path})`,
             backgroundPosition: 'center',
-            opacity: 0.95,
+            opacity: 0.15,
             backgroundSize: 'contain',
-            backgroundRepeat: 'no-repeat'
+            backgroundRepeat: 'repeat',
+
           }}
         ></div>
 
         <div
           className={
-            orientationReverse ? 'border text-right' : 'border text-left'
+            orientationReverse ? 'w-[65vw] text-right h-fit ' : 'w-[65vw] text-left h-fit '
           }
         >
-          <h2>{text}</h2>
+          <h2 className="font-bold leading-[50px]">{text}</h2>
           <p className="text-2xl text-white text-opacity-75">{menssage}</p>
         </div>
       </div>

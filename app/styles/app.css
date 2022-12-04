@@ -547,13 +547,20 @@ video {
   }
 }
 
-.m-auto {
-  margin: auto;
+.relative {
+  position: relative;
 }
 
-.mx-auto {
-  margin-left: auto;
-  margin-right: auto;
+.right-20 {
+  right: 5rem;
+}
+
+.left-20 {
+  left: 5rem;
+}
+
+.m-auto {
+  margin: auto;
 }
 
 .mt-4 {
@@ -568,8 +575,13 @@ video {
   height: 100vh;
 }
 
-.h-\[229px\] {
-  height: 229px;
+.h-full {
+  height: 100%;
+}
+
+.h-fit {
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 .h-\[522px\] {
@@ -584,8 +596,16 @@ video {
   width: 100%;
 }
 
-.w-\[356px\] {
-  width: 356px;
+.w-\[35vw\] {
+  width: 35vw;
+}
+
+.w-\[65vw\] {
+  width: 65vw;
+}
+
+.flex-row-reverse {
+  flex-direction: row-reverse;
 }
 
 .flex-col {
@@ -594,10 +614,6 @@ video {
 
 .flex-nowrap {
   flex-wrap: nowrap;
-}
-
-.items-end {
-  align-items: flex-end;
 }
 
 .items-center {
@@ -616,18 +632,19 @@ video {
   gap: 0.75rem;
 }
 
-.border {
-  border-width: 1px;
-}
-
 .bg-background-box-900 {
   --tw-bg-opacity: 1;
   background-color: rgb(26 26 26 / var(--tw-bg-opacity));
 }
 
-.px-4 {
-  padding-left: 1rem;
-  padding-right: 1rem;
+.py-20 {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.py-10 {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
 }
 
 .text-left {
@@ -641,6 +658,14 @@ video {
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.leading-\[50px\] {
+  line-height: 50px;
 }
 
 .text-background-box-300 {
@@ -728,40 +753,8 @@ h2 {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-@media (min-width: 640px) {
-  .sm\:h-\[328px\] {
-    height: 328px;
-  }
-
-  .sm\:w-\[480px\] {
-    width: 480px;
-  }
-}
-
 @media (min-width: 768px) {
-  .md\:h-\[360px\] {
-    height: 360px;
-  }
-
-  .md\:w-\[550px\] {
-    width: 550px;
-  }
-
   .md\:w-\[50vw\] {
     width: 50vw;
-  }
-
-  .md\:w-\[722px\] {
-    width: 722px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .lg\:h-\[578px\] {
-    height: 578px;
-  }
-
-  .lg\:w-\[730px\] {
-    width: 730px;
   }
 }
